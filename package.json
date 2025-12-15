@@ -1,0 +1,32 @@
+{
+  "name": "yet-another-github-card-website",
+  "version": "1.0.1",
+  "description": "Yet another github card profile for use it on your social-networks, blogs or portfolio.",
+  "main": "website/index.html",
+  "files": [
+    "website"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "test": "jest",
+    "webserver": "NODE_OPTIONS='--trace-deprecation' http-server -c-1 ./website -o /"
+  },
+  "keywords": [
+    "github",
+    "card",
+    "profile",
+    "css3",
+    "html5",
+    "landing-page"
+  ],
+  "author": "Carles Loriente",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.24.5",
+    "@babel/preset-env": "^7.24.5",
+    "babel-jest": "^29.7.0",
+    "eslint": "^9.1.1",
+    "http-server": "^14.1.1",
+    "jest": "^29.7.0"
+  }
+}

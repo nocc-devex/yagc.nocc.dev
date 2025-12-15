@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Yet Another GitHub Card</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FXPTB7L2GZ"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FXPTB7L2GZ');
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicon_io/site.webmanifest">
+    <style>
+        :root {
+            --primary-color: #f97316;
+            --secondary-color: #fb923c;
+            --dark-bg: #4b5563;
+            --light-bg: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background: var(--light-bg);
+        }
+
+        body.dark-theme {
+            --primary-color: #c2410c;
+            --secondary-color: #ea580c;
+            --dark-bg: #0f172a;
+            --light-bg: #1e293b;
+            background: var(--dark-bg);
+            color: #e2e8f0;
+        }
+
+        .error-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.05;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(249,115,22,0.3)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .error-content {
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .error-code {
+            font-size: 10rem;
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            animation: bounce 2s ease infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+
+        .error-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--dark-bg);
+        }
+
+        body.dark-theme .error-title {
+            color: #f1f5f9;
+        }
+
+        .error-message {
+            font-size: 1.2rem;
+            color: #6b7280;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        body.dark-theme .error-message {
+            color: #94a3b8;
+        }
+
+        .error-icon {
+            font-size: 5rem;
+            margin-bottom: 30px;
+            opacity: 0.3;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+
+        .btn-home {
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            border-radius: 50px;
+            margin: 10px;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary-custom {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border: none;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+            color: white;
+        }
+
+        body.dark-theme .btn-primary-custom:hover {
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn-outline-custom:hover {
+            background: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.3);
+        }
+
+        body.dark-theme .btn-outline-custom:hover {
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .quick-links {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        body.dark-theme .quick-links {
+            border-top-color: rgba(255,255,255,0.1);
+        }
+
+        .quick-links h3 {
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            color: var(--dark-bg);
+        }
+
+        body.dark-theme .quick-links h3 {
+            color: #f1f5f9;
+        }
+
+        .quick-link-item {
+            display: inline-block;
+            margin: 10px 15px;
+            color: #6b7280;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .quick-link-item:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+
+        .quick-link-item i {
+            margin-right: 8px;
+        }
+
+        body.dark-theme .quick-link-item {
+            color: #94a3b8;
+        }
+
+        .theme-switch-wrapper {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 10px 20px;
+            border-radius: 50px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        body.dark-theme .theme-switch-wrapper {
+            background: rgba(51, 65, 85, 0.95);
+        }
+
+        .theme-switch {
+            display: inline-block;
+            height: 28px;
+            position: relative;
+            width: 50px;
+            margin: 0 10px;
+        }
+
+        .theme-switch input {
+            display: none;
+        }
+
+        .slider {
+            background-color: #cbd5e1;
+            bottom: 0;
+            cursor: pointer;
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transition: 0.4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            background-color: #fff;
+            bottom: 4px;
+            content: "";
+            height: 20px;
+            left: 4px;
+            position: absolute;
+            transition: 0.4s;
+            width: 20px;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(22px);
+        }
+
+        .theme-icon {
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        body.dark-theme .theme-icon {
+            color: #e2e8f0;
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 6rem;
+            }
+            .error-title {
+                font-size: 1.8rem;
+            }
+            .error-message {
+                font-size: 1rem;
+            }
+            .btn-home {
+                display: block;
+                margin: 10px auto;
+                max-width: 300px;
+            }
+            .quick-link-item {
+                display: block;
+                margin: 15px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Theme Switch -->
+    <div class="theme-switch-wrapper">
+        <i class="fas fa-sun theme-icon"></i>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <i class="fas fa-moon theme-icon"></i>
+    </div>
+
+    <div class="error-container">
+        <div class="error-background"></div>
+        <div class="container">
+            <div class="error-content">
+                <div class="error-icon">
+                    <i class="fab fa-github"></i>
+                </div>
+                <h1 class="error-code">404</h1>
+                <h2 class="error-title">Oops! Page Not Found</h2>
+                <p class="error-message">
+                    The page you're looking for seems to have disappeared into the Git void. 
+                    Don't worry though, we can help you get back on track!
+                </p>
+                
+                <div class="error-buttons">
+                    <a href="index.html" class="btn-home btn-primary-custom">
+                        <i class="fas fa-home"></i> Back to Home
+                    </a>
+                    <a href="index.html#demo" class="btn-home btn-outline-custom">
+                        <i class="fas fa-book"></i> Documentation
+                    </a>
+                </div>
+
+                <div class="quick-links">
+                    <h3>Quick Links</h3>
+                    <div>
+                        <a href="index.html" class="quick-link-item">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                        <a href="index.html#demo" class="quick-link-item">
+                            <i class="fas fa-rocket"></i> Get Started
+                        </a>
+                        <a href="https://www.npmjs.com/package/yet-another-github-card" class="quick-link-item" target="_blank">
+                            <i class="fab fa-npm"></i> NPM Package
+                        </a>
+                        <a href="https://github.com/carlesloriente/yet-another-github-card" class="quick-link-item" target="_blank">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Theme toggle functionality
+            const themeToggle = $('#theme-toggle');
+            const body = $('body');
+            
+            // Check for saved theme preference or default to light mode
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            if (currentTheme === 'dark') {
+                body.addClass('dark-theme');
+                themeToggle.prop('checked', true);
+            }
+            
+            themeToggle.on('change', function() {
+                if ($(this).is(':checked')) {
+                    body.addClass('dark-theme');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    body.removeClass('dark-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
