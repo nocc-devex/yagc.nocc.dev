@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
       <loc>https://yagc.nocc.dev/index.html</loc>
-      <lastmod>2025-12-15T20:51:02+01:00</lastmod>
+      <lastmod>2025-18-15T20:51:02+01:00</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.5</priority>
+    </url>
+    <url>
+      <loc>https://yagc.nocc.dev/docs.html</loc>
+      <lastmod>2025-12-18T20:11:02+01:00</lastmod>
       <changefreq>monthly</changefreq>
       <priority>0.5</priority>
     </url>
