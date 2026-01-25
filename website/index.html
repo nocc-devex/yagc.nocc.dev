@@ -69,9 +69,8 @@
 
         .theme-switch-wrapper {
             position: fixed;
-            top: 20px;
             right: 20px;
-            z-index: 1000;
+            z-index: 998;
             display: flex;
             align-items: center;
             background: rgba(255, 255, 255, 0.95);
@@ -136,6 +135,143 @@
 
         body.dark-theme .theme-icon {
             color: #e2e8f0;
+        }
+
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            transition: background 0.3s ease;
+        }
+
+        body.dark-theme .navbar {
+            background: #1e293b;
+        }
+
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--primary-color) !important;
+            order: 1;
+            text-decoration: none;
+        }
+
+        .navbar-toggler {
+            order: 2;
+            margin-left: 15px;
+            border: none;
+            padding: 8px;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(75, 85, 99, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        body.dark-theme .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(226, 232, 240, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar-collapse {
+            order: 3;
+            flex-basis: 100%;
+        }
+
+        .navbar-nav {
+            margin-left: 0;
+        }
+
+        .nav-link {
+            color: var(--text-color) !important;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+
+        .nav-link i {
+            font-size: 1.3rem;
+        }
+
+        .nav-link .fa-heart {
+            color: #e74c3c;
+        }
+
+        .nav-link:hover .fa-heart {
+            color: #c0392b;
+            transform: scale(1.1);
+        }
+
+        .dropdown-menu {
+            background: white;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            padding: 10px 0;
+        }
+
+        body.dark-theme .dropdown-menu {
+            background: #334155;
+        }
+
+        .dropdown-item {
+            color: var(--text-color);
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+            background: rgba(249, 115, 22, 0.1);
+            color: var(--primary-color);
+        }
+
+        body.dark-theme .dropdown-item {
+            color: #e2e8f0;
+        }
+
+        body.dark-theme .dropdown-item:hover {
+            background: rgba(249, 115, 22, 0.1);
+        }
+
+        @media (max-width: 991px) {
+            .icon-only {
+                display: none;
+            }
+            .theme-switch-wrapper {
+                top: 80px;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .navbar-collapse {
+                flex-basis: auto;
+            }
+            .navbar-nav {
+                margin-left: auto;
+            }
+            .text-only {
+                display: none;
+            }
+            .icon-only {
+                display: inline-block;
+            }
+            .theme-switch-wrapper {
+                top: 20px;
+            }
         }
 
         .hero-section {
@@ -299,6 +435,7 @@
             font-size: 3rem;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1.5rem;
         }
@@ -364,6 +501,7 @@
             background: rgba(255,255,255,0.1);
             border-radius: 10px;
             padding: 20px;
+            -webkit-backdrop-filter: blur(10px);
             backdrop-filter: blur(10px);
             flex-grow: 1;
             display: flex;
@@ -402,6 +540,7 @@
             margin-bottom: 15px;
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
+            background-clip: text;
             -webkit-text-fill-color: transparent;
         }
 
@@ -528,6 +667,29 @@
                 display: block;
                 margin: 10px 0;
             }
+            .navbar-collapse {
+                background: white;
+                padding: 20px;
+                border-radius: 10px;
+                margin-top: 15px;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            }
+            body.dark-theme .navbar-collapse {
+                background: #334155;
+            }
+            .nav-item {
+                margin: 5px 0;
+            }
+            .dropdown-menu {
+                border: none;
+                box-shadow: none;
+                padding-left: 15px;
+                background: transparent !important;
+            }
+            .dropdown-item {
+                padding: 8px 15px;
+                font-size: 0.95rem;
+            }
         }
     </style>
 </head>
@@ -541,6 +703,56 @@
         </label>
         <i class="fas fa-moon theme-icon"></i>
     </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fab fa-github"></i> YAGC
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="docsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Documentation
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="docsDropdown">
+                            <li><a class="dropdown-item" href="docs.html#quick-start">Quick Start</a></li>
+                            <li><a class="dropdown-item" href="docs.html#installation">Installation</a></li>
+                            <li><a class="dropdown-item" href="docs.html#data-options">Data Options</a></li>
+                            <li><a class="dropdown-item" href="docs.html#themes">Themes</a></li>
+                            <li><a class="dropdown-item" href="docs.html#local-demo">Local Demo</a></li>
+                            <li><a class="dropdown-item" href="docs.html#contributing">Contributing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/sponsors/carlesloriente" target="_blank" title="Sponsor this project" rel="noopener">
+                            <i class="fas fa-heart icon-only"></i>
+                            <span class="text-only">Sponsor</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.npmjs.com/package/yet-another-github-card" target="_blank" title="NPM Package" rel="noopener">
+                            <i class="fab fa-npm icon-only"></i>
+                            <span class="text-only">NPM</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/carlesloriente/yet-another-github-card" target="_blank" title="GitHub Repository" rel="noopener">
+                            <i class="fab fa-github icon-only"></i>
+                            <span class="text-only">GitHub</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
     <!-- Hero Section -->
     <section class="hero-section">
@@ -557,7 +769,7 @@
                     <p class="hero-subtitle">Beautiful, customizable GitHub stats cards for your portfolio and blog</p>
                     <div class="hero-buttons">
                         <a href="#demo" class="btn btn-hero btn-primary-custom">Get Started</a>
-                        <a href="https://www.npmjs.com/package/yet-another-github-card" target="_blank" class="btn btn-hero btn-outline-custom">View on NPM</a>
+                        <a href="https://www.npmjs.com/package/yet-another-github-card" target="_blank" class="btn btn-hero btn-outline-custom" rel="noopener">View on NPM</a>
                     </div>
                 </div>
             </div>
@@ -690,7 +902,7 @@
                         <div class="stat-icon">
                             <i class="fas fa-download"></i>
                         </div>
-                        <span class="stat-number" data-target="631">0</span>
+                        <span class="stat-number" data-target="1186">0</span>
                         <span class="stat-label">Downloads</span>
                     </div>
                 </div>
@@ -699,7 +911,7 @@
                         <div class="stat-icon">
                             <i class="fas fa-star"></i>
                         </div>
-                        <span class="stat-number" data-target="1">0</span>
+                        <span class="stat-number" data-target="2">0</span>
                         <span class="stat-label">GitHub Stars</span>
                     </div>
                 </div>
@@ -732,7 +944,7 @@
                 <div class="col-12">
                     <h2 class="display-4 fw-bold mb-4">Ready to Showcase Your GitHub Stats?</h2>
                     <p class="lead mb-5">Join thousands of developers using Yet Another GitHub Card</p>
-                    <a href="https://www.npmjs.com/package/yet-another-github-card" target="_blank" class="btn btn-hero btn-primary-custom">Get Started Now</a>
+                    <a href="https://www.npmjs.com/package/yet-another-github-card" target="_blank" class="btn btn-hero btn-primary-custom" rel="noopener">Get Started Now</a>
                 </div>
             </div>
         </div>
@@ -743,35 +955,35 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-social">
-                    <a href="mailto:contact@example.com" title="Email">
+                    <a href="mailto:fi1nziulf@mozmail.com" title="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
-                    <a href="https://twitter.com" target="_blank" title="Twitter">
+                    <a href="https://twitter.com/godarthvader" target="_blank" title="Twitter" rel="noopener">
                         <i class="fab fa-twitter"></i>
                     </a>
-                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">
+                    <a href="https://linkedin.com/in/carlesloriente" target="_blank" title="LinkedIn" rel="noopener">
                         <i class="fab fa-linkedin"></i>
                     </a>
-                    <a href="https://github.com" target="_blank" title="GitHub">
+                    <a href="https://github.com/carlesloriente" target="_blank" title="GitHub" rel="noopener">
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
                 <div class="footer-links">
-                    <a href="#demo">Documentation</a>
-                    <a href="https://www.npmjs.com/package/yet-another-github-card" target="_blank">NPM Package</a>
-                    <a href="https://github.com/carlesloriente/yet-another-github-card" target="_blank">GitHub Repository</a>
-                    <a href="#demo">Support</a>
+                    <a href="docs.html">Documentation</a>
+                    <a href="https://www.npmjs.com/package/yet-another-github-card" target="_blank" title="NPM Package" rel="noopener">NPM Package</a>
+                    <a href="https://github.com/carlesloriente/yet-another-github-card" target="_blank" title="GitHub Repository"rel="noopener">GitHub Repository</a>
+                    <a href="https://github.com/sponsors/carlesloriente" target="_blank" title="Sponsor this project" rel="noopener">Sponsor</a>
                 </div>
             </div>
             <div class="footer-copyright">
                 <p class="mb-2">Copyright © <a href="#">Carles Loriente</a> 2025</p>
                 <p class="mb-2">
-                    <a href="https://www.npmjs.com/package/yet-another-github-card" target="_blank">Yet Another GitHub Card</a> 
-                    v1.0.1 created with <i class="fas fa-heart" style="color: #e74c3c;"></i> for developers
+                    <a href="https://www.npmjs.com/package/yet-another-github-card" target="_blank" title="NPM Package" rel="noopener">Yet Another GitHub Card</a> 
+                    v1.0.7 created with <i class="fas fa-heart" style="color: #e74c3c;"></i> for developers
                 </p>
                 <p class="mb-0">
-                    Built with <a href="https://getbootstrap.com" target="_blank">Bootstrap</a> · 
-                    Hosted on <a href="https://github.com" target="_blank">GitHub</a>
+                    Built with <a href="https://getbootstrap.com" target="_blank" title="Bootstrap" rel="noopener">Bootstrap</a> · 
+                    Hosted on <a href="https://github.com" target="_blank" title="GitHub" rel="noopener">GitHub</a>
                 </p>
             </div>
         </div>
@@ -869,6 +1081,9 @@
                 e.preventDefault();
                 var target = $($(this).attr('href'));
                 if (target.length) {
+                    // Close mobile menu if open
+                    $('.navbar-collapse').collapse('hide');
+                    
                     $('html, body').animate({
                         scrollTop: target.offset().top - 70
                     }, 1000);

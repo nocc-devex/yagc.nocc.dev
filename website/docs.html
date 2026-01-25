@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation | Yet Another GitHub Card</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="docs.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Theme Switch -->
+    <div class="theme-switch-wrapper">
+        <i class="fas fa-sun theme-icon"></i>
+        <label class="theme-switch">
+            <label for="theme-toggle" title="Toggle theme" placeholder="Select theme">Toggle Theme</label>
+            <input type="checkbox" id="theme-toggle" title="Toggle theme">
+            <span class="slider"></span>
+        </label>
+        <i class="fas fa-moon theme-icon"></i>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fab fa-github"></i> YAGC
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="docsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Documentation
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="docsDropdown">
+                            <li><a class="dropdown-item" href="#quick-start">Quick Start</a></li>
+                            <li><a class="dropdown-item" href="#installation">Installation</a></li>
+                            <li><a class="dropdown-item" href="#data-options">Data Options</a></li>
+                            <li><a class="dropdown-item" href="#themes">Themes</a></li>
+                            <li><a class="dropdown-item" href="#local-demo">Local Demo</a></li>
+                            <li><a class="dropdown-item" href="#contributing">Contributing</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/sponsors/carlesloriente" target="_blank" title="Sponsor this project" rel="noopener">
+                            <i class="fas fa-heart heart-icon"></i>
+                            <span class="text-only">Sponsor</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.npmjs.com/package/yet-another-github-card" target="_blank" title="NPM Package" rel="noopener">
+                            <i class="fab fa-npm icon-only"></i>
+                            <span class="text-only">NPM</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://github.com/carlesloriente/yet-another-github-card" target="_blank" title="GitHub Repository" rel="noopener">
+                            <i class="fab fa-github icon-only"></i>
+                            <span class="text-only">GitHub</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">Documentation</h1>
+            <p class="hero-subtitle">Everything you need to know about Yet Another GitHub Card</p>
+        </div>
+    </section>
+
+    <!-- Documentation Content -->
+    <div class="container docs-container">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-lg-3">
+                <div class="docs-sidebar">
+                    <h5>Contents</h5>
+                    <ul>
+                        <li><a href="#quick-start">Quick Start</a></li>
+                        <li><a href="#installation">Installation</a></li>
+                        <li><a href="#data-options">Data Options</a></li>
+                        <li><a href="#themes">Themes</a></li>
+                        <li><a href="#local-demo">Local Demo</a></li>
+                        <li><a href="#contributing">Contributing</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-lg-9">
+                <div class="docs-content">
+                    <h2 id="quick-start">Quick Start</h2>
+                    <p>Get your HTML embed code at the official website. Simply fill in the form with your GitHub username and grab the result code.</p>
+
+                    <h3>Including the Card in Your Portfolio</h3>
+                    <p>The easiest way to add the GitHub card to your website is by using the embed code generator. Visit the homepage, enter your GitHub username, and copy the generated HTML.</p>
+
+                    <h2 id="installation">Installation</h2>
+                    <p>You can install Yet Another GitHub Card using your preferred package manager:</p>
+
+                    <h3>Using npm</h3>
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        <code>npm install yet-another-github-card --save</code>
+                    </div>
+
+                    <h3>Using Yarn</h3>
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        <code>yarn add yet-another-github-card</code>
+                    </div>
+
+                    <h3>Using Composer</h3>
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        <code>composer require yet-another-github-card</code>
+                    </div>
+
+                    <h3>Package Structure</h3>
+                    <p>The package folder structure looks like this:</p>
+                    <div class="code-block">
+                        <code>yet-another-github-card/
+├─ css/
+├─ images/
+|  ├─ docs/
+|  ├─ favicon_io/
+├─ themes/
+└─ utils/
+   └─ js/</code>
+                    </div>
+
+                    <h2 id="data-options">GitHub Card Data Options</h2>
+                    <p>Customize your GitHub card using the following data attributes:</p>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Description</th>
+                                    <th>Default Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>data-style</code></td>
+                                    <td>Set header background theme</td>
+                                    <td><code>defaultTheme</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>data-user</code></td>
+                                    <td>Your GitHub username</td>
+                                    <td><code>""</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>data-user-stars</code></td>
+                                    <td>Count all obtained stars (repos + gists)</td>
+                                    <td><code>true</code></td>
+                                </tr>
+                                <tr>
+                                    <td><code>data-user-stats</code></td>
+                                    <td>Show selected stats (commits, contributions, followers, following, prs)</td>
+                                    <td><code>[{"name": "commits"}, {"name": "prs"}]</code></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h3>Example Usage</h3>
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        <code>&lt;github-card 
+    data-user="yourusername"
+    data-style="defaultTheme"
+    data-user-stars="true"
+    data-user-stats='[{"name":"commits"},{"name":"prs"}]'
+&gt;&lt;/github-card&gt;</code>
+                    </div>
+
+                    <h2 id="themes">Themes</h2>
+                    <p>At the moment, three prebuilt themes are available. Feel free to design unique cards by selecting your own colors and backgrounds!</p>
+
+                    <h3>1. Default Theme</h3>
+                    <p>The classic theme with a clean, professional look.</p>
+                    <div class="alert-info">
+                        <i class="fas fa-palette"></i>
+                        <strong>Usage:</strong> <code>data-style="defaultTheme"</code>
+                    </div>
+
+                    <h3>2. Cloud Theme</h3>
+                    <p>A soft, cloud-inspired background theme.</p>
+                    <div class="alert-info">
+                        <i class="fas fa-cloud"></i>
+                        <strong>Usage:</strong> <code>data-style="cloud"</code>
+                    </div>
+
+                    <h3>3. Polygon Theme</h3>
+                    <p>Modern geometric patterns for a contemporary look.</p>
+                    <div class="alert-info">
+                        <i class="fas fa-shapes"></i>
+                        <strong>Usage:</strong> <code>data-style="polygon"</code>
+                    </div>
+
+                    <h2 id="local-demo">Local Demo Card</h2>
+                    <p>The source includes resources for building and running your GitHub Card locally. If you want to see it in action, follow these steps:</p>
+
+                    <h3>Step 1: Configure Your Card</h3>
+                    <p>Open the file <code>utils/index.html</code> with your code editor and locate the custom element <code>github-card</code>.</p>
+
+                    <h3>Step 2: Edit Attributes</h3>
+                    <ol>
+                        <li>Edit <code>data-user</code> attribute with your own GitHub username</li>
+                        <li>Fill in your preferred settings for <code>data-user-stars</code> and <code>data-user-stats</code></li>
+                        <li>Save the file</li>
+                    </ol>
+
+                    <h3>Step 3: Compile Demo</h3>
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        <code>npm run compile-demo</code>
+                    </div>
+
+                    <p>The folder <code>demo</code> will be created with all required files.</p>
+
+                    <h3>Step 4: Run Local Server</h3>
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        <code>npm run server-watch</code>
+                    </div>
+
+                    <h3>Quick Build (All Steps Combined)</h3>
+                    <div class="code-block">
+                        <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+                        <code>npm run build-demo</code>
+                    </div>
+
+                    <h2 id="contributing">Contributing</h2>
+                    <p>New contributors are always welcome! If you have ideas for improvements or find bugs, please:</p>
+                    <ol>
+                        <li>Check out the <a href="https://github.com/carlesloriente/yet-another-github-card/blob/master/CONTRIBUTING.md" target="_blank" rel="noopener">Contributing Guidelines</a></li>
+                        <li>Open an issue on <a href="https://github.com/carlesloriente/yet-another-github-card/issues" target="_blank" rel="noopener">GitHub</a></li>
+                        <li>Submit a pull request with your improvements</li>
+                    </ol>
+
+                    <div class="alert-info">
+                        <i class="fas fa-heart"></i>
+                        <strong>Support the Project:</strong> Consider sponsoring the project to help fund new features and improvements!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-social">
+                    <a href="mailto:fi1nziulf@mozmail.com" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://twitter.com/godarthvader" target="_blank" title="Twitter" rel="noopener">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/carlesloriente" target="_blank" title="LinkedIn" rel="noopener">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/carlesloriente/yet-another-github-card" target="_blank" title="GitHub" rel="noopener">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="https://www.npmjs.com/package/yet-another-github-card" target="_blank" rel="noopener">NPM Package</a>
+                    <a href="https://github.com/carlesloriente/yet-another-github-card" target="_blank" rel="noopener">GitHub Repository</a>
+                    <a href="https://github.com/sponsors/carlesloriente" target="_blank" title="Sponsor this project" rel="noopener">Sponsor</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <p class="mb-2">Copyright © <a href="#">Carles Loriente</a> 2025</p>
+                <p class="mb-2">
+                    <a href="https://www.npmjs.com/package/yet-another-github-card" target="_blank" rel="noopener">Yet Another GitHub Card</a> 
+                    v1.0.7 created with <i class="fas fa-heart heart-icon"></i> for developers
+                </p>
+                <p class="mb-0">
+                    Built with <a href="https://getbootstrap.com" target="_blank" rel="noopener">Bootstrap</a> · 
+                    Hosted on <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Theme toggle functionality
+            const themeToggle = $('#theme-toggle');
+            const body = $('body');
+            
+            const currentTheme = localStorage.getItem('theme') || 'light';
+            if (currentTheme === 'dark') {
+                body.addClass('dark-theme');
+                themeToggle.prop('checked', true);
+            }
+            
+            themeToggle.on('change', function() {
+                if ($(this).is(':checked')) {
+                    body.addClass('dark-theme');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    body.removeClass('dark-theme');
+                    localStorage.setItem('theme', 'light');
+                }
+            });
+
+            // Smooth scroll for anchor links
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                var target = $($(this).attr('href'));
+                if (target.length) {
+                    // Close mobile menu if open
+                    $('.navbar-collapse').collapse('hide');
+                    
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 100
+                    }, 800);
+                }
+            });
+        });
+
+        function copyCode(button) {
+            const codeBlock = button.parentElement;
+            const code = codeBlock.querySelector('code').textContent;
+            navigator.clipboard.writeText(code).then(() => {
+                button.textContent = 'Copied!';
+                setTimeout(() => {
+                    button.textContent = 'Copy';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
