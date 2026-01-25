@@ -104,10 +104,13 @@
             <div class="col-lg-9">
                 <div class="docs-content">
                     <h2 id="quick-start">Quick Start</h2>
-                    <p>Get your HTML embed code at the official website. Simply fill in the form with your GitHub username and grab the result code.</p>
-
                     <h3>Including the Card in Your Portfolio</h3>
-                    <p>The easiest way to add the GitHub card to your website is by using the embed code generator. Visit the homepage, enter your GitHub username, and copy the generated HTML.</p>
+                    <p>The easiest way to add the GitHub card to your website is by including this in your HTML, copy and paste the following code replacing data-user with your GitHub username:</p>
+
+                    <code>
+                        &lt;github-card data-style="defaultTheme" data-user="carlesloriente" data-user-stars="true" data-user-stats='[{"name": "commits"}, {"name": "contributions"}]'&gt;&lt;/github-card&gt;
+                        &lt;script type="module" src="https://unpkg.com/yet-another-github-card@1.0.7/yagc.min.js"&gt;&lt;/script&gt;
+                    </code>
 
                     <h2 id="installation">Installation</h2>
                     <p>You can install Yet Another GitHub Card using your preferred package manager:</p>
