@@ -1,0 +1,37 @@
+{
+  "id": "/index.html",
+  "lang": "en",
+  "dir": "ltr",
+  "name": "Yet Another GitHub Card",
+  "short_name": "YAGC",
+  "description": "Beautiful, customizable GitHub stats cards for your portfolio and blog.",
+  "categories": ["github", "github-stats", "portfolio"],
+  "icons": [
+      {
+        "src": "\/images\/favicon_io\/android-chrome-512x512.png",
+        "sizes": "512x512",
+        "type": "image\/png"
+      }
+  ],
+  "screenshots": [
+    {
+      "src": "\/images\/yagc-showroom.png",
+      "sizes": "1000x695",
+      "type": "image\/png"
+    }
+  ],
+  "launch_handler": {
+    "client_mode": ["focus-existing", "auto"]
+  },
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "start_url": "https://yagc.nocc.dev",
+  "scope": "/",
+  "scope_extensions": [
+    {
+      "origin": "https://yagc.nocc.dev"
+    }
+  ],
+  "display": "standalone",
+  "orientation": "natural"
+}
