@@ -1,6 +1,6 @@
 # Yet Another Github Card - Show your developer skills in social networks
 
-[![YAGC logo](./src/images/docs/yagc-showroom.png)](https://yagc.nocc.dev)
+[![YAGC logo](./website/images/yagc-showroom.png)](https://yagc.nocc.dev)
 
 [![yagc package](https://img.shields.io/npm/v/yet-another-github-card?logo=npm&logoColor=fff)](https://www.npm.im/yet-another-github-card)
 [![NPM Downloads](https://img.shields.io/npm/dm/yet-another-github-card)](https://www.npm.im/yet-another-github-card)
@@ -38,145 +38,7 @@
 
 ## Table of contents
 
-- [Yet Another Github Card - Show your developer skills in social networks](#yet-another-github-card---show-your-developer-skills-in-social-networks)
-  - [Introduction](#introduction)
-  - [Features](#features)
-  - [Let's make this project even better for everyone. Sponsorship fuels new features! 🎉](#lets-make-this-project-even-better-for-everyone-sponsorship-fuels-new-features-)
-  - [Share on](#share-on)
-  - [Table of contents](#table-of-contents)
-  - [What's included](#whats-included)
-    - [Bundled dependencies](#bundled-dependencies)
-  - [Quick Start](#quick-start)
-    - [Including the card in your portfolio site](#including-the-card-in-your-portfolio-site)
-  - [Documentation](#documentation)
-  - [Using the Yet-Another-Github-Card npm package in your project](#using-the-yet-another-github-card-npm-package-in-your-project)
-    - [Github Card Data Options](#github-card-data-options)
-    - [Themes](#themes)
-      - [1. DefaultTheme](#1-defaulttheme)
-      - [2. Cloud](#2-cloud)
-      - [3. Polygon](#3-polygon)
-    - [Local Demo card](#local-demo-card)
-  - [Bugs and Issues](#bugs-and-issues)
-  - [Contributing](#contributing)
-  - [Creator](#creator)
-  - [Thanks](#thanks)
-  - [Copyright and License](#copyright-and-license)
-
-## What's included
-
-You'll find all the required directories and files within the download, logically grouping common assets and providing compiled and minified variations.
-
-### Bundled dependencies
-
-- SVG Backgrounds
-- [A few Bootstrap 5 icons](https://icons.getbootstrap.com)
-
-## Quick Start
-
-### Including the card in your portfolio site
-
-Get your HTML embed code at [yagc](https://yagc.notesoncloudcomputing.com/index.html#embedcode), fill in the form with your GitHub username and grab the result code.
-
-## Documentation
-
-## Using the Yet-Another-Github-Card npm package in your project
-
-Select your favourite package manager and follow the instructions below.
-
-- npm:
-
-```bash
-  npm install yet-another-github-card --save
-```
-
-- Yarn:
-
-```bash
-  yarn add yet-another-github-card
-```
-
-- Composer:
-
-```bash
-  composer require yet-another-github-card
-```
-
-The package folder structure looks like this:
-
-```filesystem
-  yet-another-github-card/
-  ├─ src/
-  |  ├─ css/
-  |  ├─ images/
-  |  └─ themes/
-  └─ utils/
-     └─ js/
-```
-
-### Github Card Data Options
-
-| Name              | Description                                                                                                                                | Default value                           |
-| ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------- |
-| `data-style`      | Set header background image.                                                                                                               | `defaultTheme`                          |
-| `data-user`       | Your GitHub username value                                                                                                                 | ``                                      |
-| `data-user-stars` | Count all your obtained stars, includes; repositories and gists                                                                            | `true`                                  |
-| `data-user-stats` | Show selected stats adding/removing JSON key:value entries. Key: name. Values: 'commits', 'contributions', 'followers', 'following', 'prs' | `[{"name": "commits"}, {"name": "prs}]` |
-
-### Themes
-
-At the moment, three prebuilt themes are available. Feel free to design unique cards by selecting your own colors and backgrounds!
-
-#### 1. DefaultTheme
-
-![YAGC defaultTheme](./src/images/docs/yagc-themes-style_default.png)
-
-#### 2. Cloud
-
-![YAGC cloud](./src/images/docs/yagc-themes-style_cloud.png)
-
-#### 3. Polygon
-
-![YAGC polygon](./src/images/docs/yagc-themes-style_polygon.png)
-
-### Local Demo card
-
-The source includes resources for building and running locally your Github Card.
-
-If you want to see it in action, there's a demo included, complete the following steps.
-
-Open with your code editor the file `utils/index.html`
-
-1.- Locate the custom element `github-card`, edit `data-user` attribute with your own GitHub username.
-
-2.- Fill with your preferred settings the attributes: `data-user-stars` and `data-user-stats`.
-
-3.- Done, save the file and run the command:
-
-```bash
-  npm run compile-demo
-```
-
-The folder `demo` will be created and contain all the required files.
-
-To run it throught the bundled web server, run the command:
-
-```bash
-  npm run server-watch
-```
-
-Additionally, if you want execute all these steps altogether, run the command:
-
-```bash
-  npm run build-demo
-```
-
-## Bugs and Issues
-
-Have a bug or an issue with this package? [Open a new issue](https://github.com/carlesloriente/yet-another-github-card/issues) here on GitHub!
-
-## Contributing
-
-New contributors are always welcome! Check out [CONTRIBUTING.md](https://github.com/carlesloriente/yet-another-github-card/blob/master/CONTRIBUTING.md) to get involved.
+This repository contains the source code of the Yet Another Github Card public website.
 
 ## Creator
 
@@ -192,4 +54,4 @@ Thanks to you.
 
 ## Copyright and License
 
-Copyright (c) 2025 Carles Loriente. Code released under the [MIT](https://github.com/carlesloriente/yet-another-github-card/blob/master/LICENSE) license.
+Copyright (c) 2026 Carles Loriente. Code released under the [MIT](https://github.com/carlesloriente/yet-another-github-card/blob/master/LICENSE) license.
